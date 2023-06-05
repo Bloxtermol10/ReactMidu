@@ -1,16 +1,23 @@
 import "./TwFollowCard.css"
 
-const TwFollowCard = () => {
+const TwFollowCard = ({children,formatUsername, avatar, name, userName,isFollow}) => {
+const text = isFollow ? "Siguiendo" : "Seguir"
+const buttonClass = isFollow
+    ? 'tw-followCard-button is-follow'
+    : 'tw-followCard-button'
     return(
         <article className="tw-followCard">
         <header  className="tw-followCard-header">
-            <img  className="tw-followCard-img" src="https://pbs.twimg.com/profile_images/1540810647604183046/OhYhwdAi_400x400.jpg" alt="Avatar" />
-            <div className="tw-followCard-info">  <strong className="tw-followCard-name">Ibai</strong>
-                <span className="tw-followCard-userName">IbaiLlanos</span>
+            <img  className="tw-followCard-avatar" src={avatar} alt="Avatar" />
+            <div className="tw-followCard-info">  <strong className="tw-followCard-infoName">{name}</strong>
+            {children}
+                <span className="tw-followCard-infoUserName">{formatUsername(userName)}</span>
             </div>
         </header>
         <aside>
-            <button className="tw-followCard-button">Seguir</button>
+            <button className={buttonClass}>
+                {text}
+            </button>
         </aside>
      </article>
     )
