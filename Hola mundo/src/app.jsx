@@ -9,14 +9,12 @@ const App = () =>{
 
         <TwFollowCard 
             formatUsername={formatUsername}
-            isFollow
             avatar="https://pbs.twimg.com/profile_images/1540810647604183046/OhYhwdAi_400x400.jpg" 
             name="Ibai" 
             userName={"@IbaiLlanos"}
             />
         <TwFollowCard 
             formatUsername={formatUsername}
-            isFollow={false} 
             avatar="https://pbs.twimg.com/profile_images/1540810647604183046/OhYhwdAi_400x400.jpg" 
             name="Ibai" 
             userName={"@IbaiLlanos"}

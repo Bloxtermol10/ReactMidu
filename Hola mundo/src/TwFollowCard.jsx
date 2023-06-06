@@ -1,10 +1,18 @@
+import { useState } from "react"
 import "./TwFollowCard.css"
 
-const TwFollowCard = ({children,formatUsername, avatar, name, userName,isFollow}) => {
-const text = isFollow ? "Siguiendo" : "Seguir"
-const buttonClass = isFollow
-    ? 'tw-followCard-button is-follow'
-    : 'tw-followCard-button'
+const TwFollowCard = ({children,formatUsername, avatar, name, userName}) => {
+    const [isFollow,setIsFollow] = useState(false)
+
+
+    const text = isFollow ? "Siguiendo" : "Seguir"
+    const buttonClass = isFollow
+      ? 'tw-followCard-button is-follow'
+      : 'tw-followCard-button'
+
+    const handleClick = () =>{
+        setIsFollow(!isFollow)
+    }
     return(
         <article className="tw-followCard">
         <header  className="tw-followCard-header">
@@ -15,8 +23,13 @@ const buttonClass = isFollow
             </div>
         </header>
         <aside>
-            <button className={buttonClass}>
-                {text}
+            <button className={buttonClass}
+             onClick={handleClick}
+            >
+                <span className="tw-followCard-button-text">
+                     {text}
+                </span>
+                <span className="tw-followCard-button-unFollow">Dejar de seguir </span>
             </button>
         </aside>
      </article>
