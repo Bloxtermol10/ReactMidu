@@ -1,5 +1,5 @@
 import { useState } from "react"
-import "./TwFollowCard.css"
+import "../styles/TwFollowCard.css"
 
 const TwFollowCard = ({children,formatUsername, name, userName}) => {
     const [isFollow,setIsFollow] = useState(false)
