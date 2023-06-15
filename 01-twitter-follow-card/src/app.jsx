@@ -1,7 +1,7 @@
 import TwFollowCard from "./components/TwFollowCard"
 
-import { diego, Users } from "./logic/db";
-import { formatUsername } from "./logic/text";
+import { diego, Users } from "./logic/app/db";
+import { formatUsername } from "./logic/app/app";
 
 const App = () => {
   
