@@ -11,7 +11,7 @@ const useFetchUsers = () => {
      return boolean ? setPage(1) : setPage(2);
     };
     return {
-      users: data,
+      usersResponse: data,
       newBoolean: boolean,
       booleanState,
     };

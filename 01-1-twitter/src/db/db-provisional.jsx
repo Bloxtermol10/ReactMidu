@@ -1,4 +1,4 @@
-export const Users = [
+export const dbUsersOutConexion = [
     {
       id :  1,
       first_name : 'Diego',
