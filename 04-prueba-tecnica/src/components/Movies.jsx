@@ -3,11 +3,11 @@ export function ListOfMovies({ movies }) {
 
 
   return (
-    <ul>
+    <ul className="movies">
       {movies.map((movie) => {
         return (
-          <li key={movie.id} className="card">
-            <h1>{movie.title}</h1>
+          <li key={movie.id} className="movie">
+            <h3>{movie.title}</h3>
             <p>{movie.year}</p>
             <img src={movie.poster} alt={movie.title} />
           </li>

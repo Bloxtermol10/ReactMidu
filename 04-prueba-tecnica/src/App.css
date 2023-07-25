@@ -1,16 +1,45 @@
+*{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    max-width: 1200px;
+}
 .page{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    max-width: 1200px;
 }
 main{
     display: flex;
     justify-content: center;
-    align-items: center;
+    width: 100%;
 }
 .form{
     display: flex;
     align-items: center;
     justify-content: center; 
+}
+.form input:invalid{
+    border: solid 2px red;
+}
+.movies {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(200px , 1fr));
+    gap: 32px;
+}
+.movie{
+    text-align: center;
+}
+.movie img{
+    border-radius: 8px;
+}
+.movie p{
+    padding-bottom:10px ;
 }
